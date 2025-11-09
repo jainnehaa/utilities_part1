@@ -1,0 +1,27 @@
+## on Windows Subsystem for Linux (WSL) - Ubuntu
+
+## check if pdfunit is present on Ubuntu
+~$ which pdfunite
+
+## install libs for pdfunit
+~$ sudo apt update
+~$ sudo apt install poppler-utils
+
+## check if pdfunit is present on Ubuntu
+~$ which pdfunite
+/usr/bin/pdfunite
+
+## check for folders where windows drives (c:/d: etc) data is present, say /mnt or similar
+
+## when file is edited on windows - The dos2unix utility addresses the incompatibility of line ending conventions between different operating systems, primarily Windows (DOS) and Unix-like systems (including Linux and macOS)
+## error : -bash: ./merge_pdfs.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+## check and install dos2unix
+$ which dos2unix
+$ sudo apt install dos2unix
+$ dos2unix merge_pdfs.sh
+dos2unix: converting file merge_pdfs.sh to Unix format...
+$ ./merge_pdfs.sh outfileName.pdf oldFileNamesPattern_20*.pdf
+Merging PDFs into outfileName.pdf ...
+$ ./merge_pdfs.sh outfileName.pdf *.pdf
+Merging PDFs into outfileName.pdf ...
